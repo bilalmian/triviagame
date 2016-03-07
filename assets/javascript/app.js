@@ -74,6 +74,7 @@
 			}],
 		correct: 0,
 		incorrect: 0,
+		counter:0
 
 		setup: function() {
 			$('#card').hide();
@@ -97,6 +98,7 @@
 			var pokeImage = $('<img>');
 
 			for (var i = 0; i < this.quiz.length; i++) {
+				this.counter = i;
 				document.querySelector('#question').innerHTML = this.quiz[i].question;
 				pokeImage.attr("src", this.quiz[i].picture);
 				$('#pokes').append(pokeImage);
@@ -114,35 +116,26 @@
 				});
 
 			};
-			
-			
 
 		},
 
-		next: function () {
+		// next: function () {
 
-			$('.answer').on('click', function(e) {
-				if (indexoFe == this.quiz[i].answer);
-			});
-
-
-			
-			var pokeImage = $('<img>');
-			pokeImage.attr("src", this.quiz[i].picture);
-			$('#pokes').append(pokeImage);
-			document.querySelector('#answer0').innerHTML = this.quiz[i].choices[0];
-			document.querySelector('#answer1').innerHTML = this.quiz[i].choices[1];
-			document.querySelector('#answer2').innerHTML = this.quiz[i].choices[2];
-			document.querySelector('#answer3').innerHTML = this.quiz[i].choices[3];
+		// 	$('.answer').on('click', function(e) {
+		// 		if (indexoFe == this.quiz[i].answer);
+		// 	});
 				
-			
+		}	
 			for (var i = 0; i < 4; i++) {
 				var buttonAnswers = $('<button>');
 				buttonAnswers.attr('data-num', i);
 				buttonAnswers.addClass('nextQuestion');		
 			};
 
+		answer: function () {
+
 			
+		
 		}
 	}
 
