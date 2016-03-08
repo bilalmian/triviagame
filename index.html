@@ -7,22 +7,29 @@
 </head>
 <body>
 
-	<div class = "container">
-		<div id ="main-section"> 
-			<h1> Who's That Pokemon <br /> Trivia Game </h1>
-			<button id = "begin">Start Game</button>
-			<div id = "card">
-				<span id ="question"></span>
-				<span id = "pokes"></span>
-				<button><span id ="answer0"></span></button>
-				<button><span id ="answer1"></span></button>
-				<button><span id ="answer2"></span></button>
-				<button><span id ="answer3"></span></button>
-			</div>
-			<span id ="show-number"></span>
-		</div>
-	</div>
+<div id="container">
+		<h1>Pokemon Trivia Game</h1>
+			<p> 
+				Welcome to the Pokemon Trivia Game! Once you click the begin button below, you'll be asked to guess what pokemon is being shown. Your score will be displayed once all the questions have been answered. Good Luck!
+			</p>
 
+		<div id="main">
+			<h3 id="questions" class="card"></h3>
+			<div><span id= "pokes"></span></div>
+			<div id="choices" class="card">
+				<input type="radio" name="choice" value = 0><span id="answer0"></span>
+				<br />
+				<input type="radio" name="choice" value = 1><span id="answer1"></span>
+				<br />
+				<input type="radio" name="choice" value = 2><span id="answer2"></span>
+				<br />
+				<input type="radio" name="choice" value = 3><span id="answer3"></span>
+			</div>
+			<div>
+			<br />
+				<button id="backBtn">Back</button>
+				<button id="nextBtn">Next</button>
+			</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script type="text/javascript" src="assets/javascript/app.js">
 	
